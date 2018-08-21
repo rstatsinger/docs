@@ -20,9 +20,9 @@ Newer systems which use systemd, including EL7 and Ubuntu 16.04, store Syslog me
 
 If there aren't any logs in either of these storage locations, verify Syslog configuration `/etc/syslog.conf`; the host may be configured to drop the message types or log level used by the Exec Helper.
 
-## Issue: I removed the libcontrast_universal_installer.so libraries, and now my system errors on every command I run 
+## Issue: I removed the libcontrast_exec_helper.so libraries, and now my system errors on every command I run
 
-The host emits these errors because the *&ast;nix* system has been globally configured to load the *libcontrast_universal_installer.so* library for every binary on the system to determine if it should inject the Java agent into it. Even if you manually removed the library, the global configuration of dynamic loader is still referencing it and is failing/warning when it can't find the file.
+The host emits these errors because the *&ast;nix* system has been globally configured to load the *libcontrast_exec_helper.so* library for every binary on the system to determine if it should inject the Java agent into it. Even if you manually removed the library, the global configuration of dynamic loader is still referencing it and is failing/warning when it can't find the file.
 
 ### Linux 
 
