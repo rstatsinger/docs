@@ -24,7 +24,7 @@ To install the Contrast Java agent for Ubuntu-based systems, complete the follow
 
 ```
 curl https://contrastsecurity.jfrog.io/contrastsecurity/api/gpg/key/public | sudo apt-key add -
-echo "deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-staging/ all contrast" | sudo tee /etc/apt/sources.list.d/contrast-staging.list
+echo "deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-staging/ all contrast" | sudo tee /etc/apt/sources.list.d/contrast-staging-all.list
 ```
 
 * Once you've finished configuration, install the Contrast Java agent.
@@ -55,7 +55,7 @@ dpkg -s contrast-java-agent
 
 ```
 curl https://contrastsecurity.jfrog.io/contrastsecurity/api/gpg/key/public | sudo apt-key add -
-echo "deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-staging/ $(bash -c '. /etc/lsb-release && echo $DISTRIB_CODENAME') contrast" | sudo tee /etc/apt/sources.list.d/contrast-staging.list
+echo "deb https://contrastsecurity.jfrog.io/contrastsecurity/debian-staging/ $(bash -c '. /etc/lsb-release && echo $DISTRIB_CODENAME') contrast" | sudo tee /etc/apt/sources.list.d/contrast-staging-$(bash -c '. /etc/lsb-release && echo $DISTRIB_CODENAME').list
 ```
 
 * Once you've finished configuration, install the `contrast-java-agent-exec-helper` package.
