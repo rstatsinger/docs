@@ -4,8 +4,6 @@ description: "Tips to improve app performance with the Java agent"
 tags: "troubleshoot java agent performance latency startup"
 -->
 
-As you might expect, Contrast's analysis does make your app run a little slower. The good news is it's generally not enough for anyone to complain about, and the results are definitely worth it.
-
 
 ## Startup Time
 
